@@ -3,8 +3,8 @@ version: "2.5.3"
 summary: GMC
 description: "For more details please visit: https://github.com/Musicoin/go-musicoin"
 
-grade: devel
-confinement: devmode
+grade: stable
+confinement: classic
 
 apps:
   gmc:
