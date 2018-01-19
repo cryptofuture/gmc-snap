@@ -1,0 +1,19 @@
+name: gmc
+version: "2.5.3"
+summary: GMC
+description: "For more details please visit: https://github.com/Musicoin/go-musicoin"
+
+grade: devel
+confinement: devmode
+
+apps:
+  gmc:
+    command: bin/gmc --datadir "$SNAP_USER_COMMON/musicoin/gmc"
+
+parts:
+  gmc:
+    plugin: nil
+    prepare: ./stage_binaries.sh
+    install: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
+      cp ./arch/gmc $SNAPCRAFT_PART_INSTALL/bin/gmc
